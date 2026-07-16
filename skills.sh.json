@@ -1,0 +1,13 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "System Cleaners",
+      "description": "Skills for cleaning caches and reclaiming disk space.",
+      "skills": [
+        "cleanforme"
+      ]
+    }
+  ]
+}
