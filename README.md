@@ -1,37 +1,77 @@
-# cleanforme-skill
+# 🧹 cleanforme-skill
 
-An AI agent skill to help clean up disk space, system temp files, developer caches (Docker, Conda, NPM, pip, Gradle, Cargo/Rust), and unused Android emulators.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Broom.png" alt="Broom" width="120" height="120" />
+</p>
 
-## Installation
+<p align="center">
+  <strong>An elegant, automated AI agent skill to scan, clean, and reclaim system storage and developer caches.</strong>
+</p>
 
-You can install this skill for your AI agents (such as Claude Code, Cursor, Windsurf, Cline, Gemini, and Antigravity) using the `skills` CLI:
+<p align="center">
+  <a href="https://skills.sh/pichyyynews/cleanforme-skill"><img src="https://img.shields.io/badge/skills.sh-PichyyyNews%2Fcleanforme--skill-blue?style=for-the-badge&logo=vercel" alt="skills.sh" /></a>
+  <img src="https://img.shields.io/github/stars/PichyyyNews/cleanforme-skill?style=for-the-badge&color=gold" alt="Stars" />
+  <img src="https://img.shields.io/github/license/PichyyyNews/cleanforme-skill?style=for-the-badge&color=green" alt="License" />
+</p>
+
+---
+
+## 🚀 Overview
+
+**cleanforme-skill** is a premium agent capabilities bundle designed for the modern AI developer. It equips your AI agents (Claude Code, Cursor, Cline, Windsurf, Gemini, etc.) with the direct capability to analyze disk space, discover wasteful build caches, and safely delete garbage data—saving you tens of gigabytes of storage automatically.
+
+---
+
+## ⚡ Installation
+
+Install it directly into your local agent environment using the `skills` CLI:
 
 ```bash
 npx skills add PichyyyNews/cleanforme-skill
 ```
 
-## How It Works
+---
 
-Once installed, your AI agent will gain the procedural knowledge to safely and systematically free up disk space on your machine.
+## 💎 Features & Capabilities
 
-When you ask the agent to free up disk space, clean your machine, or when the agent detects low storage, it will:
-1. **Analyze:** Inspect your disk space and check size of common temporary folders.
-2. **Docker Clean:** Stop/remove all containers, prune unused images, volumes, and build cache.
-3. **VHDX Compaction (WSL2):** Create a script for you to compact the virtual disk `docker_data.vhdx` (reclaiming 20+ GB of host space).
-4. **Developer Caches:** Clean npm cache, pip cache, gradle packages, and cargo/rustup files.
-5. **Conda Cleanup:** Run `conda clean` to remove unused packages and tarballs.
-6. **Android Emulator:** Clean up unused AVD (Android Virtual Device) images.
-7. **System Temp:** Clear user temp directories.
+Your AI assistant will gain the ability to perform the following operations:
 
-## Supported Agents
-
-This skill is compatible with any AI coding assistant that supports the open agent skills ecosystem, including:
-- Claude Code
-- Cursor
-- Windsurf
-- Cline
-- Gemini
-- Antigravity
+| Resource / Cache | Cleanup Action | Estimated Reclaimed Space |
+| :--- | :--- | :--- |
+| **🐳 Docker Engine** | Stop/delete all containers, prune unused images, volumes, and builder cache. | **20 GB - 50 GB+** |
+| **💾 WSL2 Virtual Disk (`.vhdx`)** | Automatically generate and instruct disk compaction via `diskpart` (reclaims host space). | **15 GB - 30 GB+** |
+| **🤖 Android Emulator (AVD)** | Scan and delete unused device system/snapshot images in `.android/avd/`. | **5 GB - 15 GB+** |
+| **📦 Conda Package Manager** | Run `conda clean` to remove cached index files, tarballs, and unused packages. | **5 GB - 10 GB+** |
+| **☕ Gradle Cache** | Clear cached build artifacts and package dependencies (`~/.gradle`). | **2 GB - 5 GB** |
+| **🟢 Node Package Manager** | Wipe global NPM and package cache files (`~/.npm` / `npm-cache`). | **1 GB - 3 GB** |
+| **🦀 Rust Cargo / Rustup** | Remove built artifact caches and index registries (`~/.cargo` & `~/.rustup`). | **1 GB - 3 GB** |
+| **🐍 Python Pip** | Clean download packages cache (`~/.cache/pip`). | **0.5 GB - 2 GB** |
+| **⚙️ System Temp Files** | Safe deletion of temporary OS/app logs and transient files (`AppData/Local/Temp`). | **1 GB - 5 GB** |
 
 ---
-*Created with love by PichyyyNews.*
+
+## 🛠️ Usage Example
+
+Simply ask your AI agent to clean your system, for example:
+> *"Help inspect my disk and free up some space, my C drive is getting full."*
+
+The agent will automatically trigger this skill, scan the predefined folders, present a checklist of items to clean, and execute the cleanup safely with your consent.
+
+---
+
+## 📂 Repository Layout
+
+```tree
+cleanforme-skill/
+├── README.md               # Beautiful documentation page
+├── skills.sh.json          # Repository groupings config
+└── skills/
+    └── cleanforme/
+        └── SKILL.md        # AI Agent executable prompt & instructions
+```
+
+---
+
+<p align="center">
+  Built with ❤️ for the AI agent developer community. Feel free to star ⭐ this repository if it helped you free up space!
+</p>
